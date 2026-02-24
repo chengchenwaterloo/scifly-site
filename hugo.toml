@@ -1,4 +1,4 @@
-baseURL = "https://example.com/"
+baseURL = "https://scifly-site.pages.dev/"
 title = "SciFly"
 defaultContentLanguage = "zh"
 enableRobotsTXT = true
@@ -25,3 +25,4 @@ enableRobotsTXT = true
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
