@@ -1,0 +1,5 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  <div class="muted">{{ .Date.Format "2006-01-02" }}</div>
+  <div style="margin-top:14px">{{ .Content }}</div>
+{{ end }}

@@ -1,0 +1,27 @@
+baseURL = "https://example.com/"
+title = "SciFly"
+defaultContentLanguage = "zh"
+enableRobotsTXT = true
+
+[languages]
+  [languages.zh]
+    languageName = "中文"
+    weight = 1
+    contentDir = "content/zh"
+    title = "上海赛思飞科技有限公司"
+  [languages.en]
+    languageName = "EN"
+    weight = 2
+    contentDir = "content/en"
+    title = "Shanghai SciFly Technology Co., Ltd."
+
+[params]
+  brand_zh = "上海赛思飞科技有限公司"
+  brand_en = "Shanghai SciFly Technology Co., Ltd."
+  tagline_zh = "面向复合材料产业的工程与技术解决方案"
+  tagline_en = "Engineering & technology solutions for composites"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

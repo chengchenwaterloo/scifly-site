@@ -1,0 +1,31 @@
+<header>
+  <div>
+    <div><strong>{{ if eq .Site.Language.Lang "zh" }}{{ .Site.Params.brand_zh }}{{ else }}{{ .Site.Params.brand_en }}{{ end }}</strong></div>
+    <div class="muted">{{ if eq .Site.Language.Lang "zh" }}{{ .Site.Params.tagline_zh }}{{ else }}{{ .Site.Params.tagline_en }}{{ end }}</div>
+  </div>
+
+  <div>
+    <nav>
+      <a href="{{ "/" | relLangURL }}">Home</a>
+      <a href="{{ "/services/" | relLangURL }}">{{ if eq .Site.Language.Lang "zh" }}服务{{ else }}Services{{ end }}</a>
+      <a href="{{ "/cases/" | relLangURL }}">{{ if eq .Site.Language.Lang "zh" }}案例{{ else }}Cases{{ end }}</a>
+      <a href="{{ "/downloads/" | relLangURL }}">{{ if eq .Site.Language.Lang "zh" }}下载{{ else }}Downloads{{ end }}</a>
+      <a href="{{ "/contact/" | relLangURL }}">{{ if eq .Site.Language.Lang "zh" }}联系{{ else }}Contact{{ end }}</a>
+    </nav>
+
+    <div style="margin-top:6px">
+      {{ if .IsTranslated }}
+        {{ range .Translations }}
+          <a class="btn" href="{{ .RelPermalink }}">{{ .Site.Language.LanguageName }}</a>
+        {{ end }}
+      {{ else }}
+        {{/* 当页面没有翻译时，给一个语言切换到首页 */}}
+        {{ if eq .Site.Language.Lang "zh" }}
+          <a class="btn" href="{{ "/en/" | relLangURL }}">EN</a>
+        {{ else }}
+          <a class="btn" href="{{ "/zh/" | relLangURL }}">中文</a>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</header>
